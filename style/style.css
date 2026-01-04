@@ -1,0 +1,9 @@
+#app {
+    align-content: center;
+    place-content: center;
+    display: flex;
+}
+
+td {
+    border: 1px solid darkgray;
+}

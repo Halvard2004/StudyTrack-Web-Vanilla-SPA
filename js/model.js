@@ -10,6 +10,7 @@ model = {
     endTime: "14:00"
   },
   {
+    id: 1,
     classNameId: 2,
     typeId: 1,
     finished: true,
@@ -18,6 +19,7 @@ model = {
     endTime: "10:30"
   },
   {
+    id: 2,
     classNameId: 3,
     typeId: 2,
     finished: false,
@@ -26,7 +28,8 @@ model = {
     endTime: "16:00"
   },
   {
-    classNameId: 4,
+    id: 3,
+    classNameId: 1,
     typeId: 3,
     finished: false,
     date: "2026.01.10",
@@ -34,7 +37,8 @@ model = {
     endTime: "13:00"
   },
   {
-    classNameId: 5,
+    id: 4,
+    classNameId: 1,
     typeId: 2,
     finished: false,
     date: "2026.01.15",
