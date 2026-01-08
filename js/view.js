@@ -1,6 +1,8 @@
 function updateView(){
     document.getElementById("app").innerHTML = /*HTML*/ `
-    ${createTable()}
+    ${!model.input.addView ? createTable() : ""}
+    ${model.input.addView ? createAdd() : ""}
+    <button onclick="changeBool('addView')">${!model.input.addView ? "Add" : "Cancel"}</button>
 `;
 }
 
@@ -22,14 +24,18 @@ function createTable(){
     return html
 }
 
-function getClassName(id){
 
-    const selectedClass = (model.classes).find(element => element.id == id);
-    return selectedClass.className
-}
-
-function getClassType(id){
-
-    const selectedClassType = (model.studyType).find(element => element.id == id);
-    return selectedClassType.type
+function createAdd() {
+    let html = /*HTML*/ `
+    <form>
+    <label>Test</label>
+    <input>
+    <input>
+    <input>
+    <input>
+    <input>
+    <input>
+    </form>
+    `;
+    return html
 }
