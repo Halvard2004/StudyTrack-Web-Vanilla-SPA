@@ -1,0 +1,27 @@
+{
+  "name": "studytrack-web-vanilla-spa",
+  "version": "1.0.0",
+  "description": "Dette er en oppgave du kan lese mer på readme",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halvard2004/StudyTrack-Web-Vanilla-SPA.git"
+  },
+  "keywords": [
+    "Es-Moduler",
+    "State-Håndtering",
+    "mock-API",
+    "default",
+    "js"
+  ],
+  "author": "Halvard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Halvard2004/StudyTrack-Web-Vanilla-SPA/issues"
+  },
+  "homepage": "https://github.com/Halvard2004/StudyTrack-Web-Vanilla-SPA#readme"
+}

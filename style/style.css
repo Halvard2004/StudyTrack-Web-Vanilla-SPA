@@ -7,3 +7,22 @@
 td {
     border: 1px solid darkgray;
 }
+
+
+form {
+    display: grid;
+    width: 250px;
+    gap: 5px;
+    align-items: center;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
