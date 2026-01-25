@@ -1,9 +1,12 @@
 import {updateView} from './view.js';
 import {changeBool, addStudySession, fetchInputValues}  from './controller.js';
+import { getList, getClasses, getStudyTypes } from './api.js';
 
-
-async function initialize(){
+function initialize(){
     updateView();
+    console.log(getList());
+    console.log(getClasses());
+    console.log(getStudyTypes());
 }
 
 function AddButton(){
@@ -12,7 +15,7 @@ function AddButton(){
     updateView();
 }
 
-async function SubmitButton(){
+function SubmitButton(){
     fetchInputValues();
     addStudySession();
     updateView();
