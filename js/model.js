@@ -1,4 +1,4 @@
-model = {
+export var model = {
     input: {
       addView: false, 
       addInputs: {    

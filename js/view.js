@@ -1,8 +1,11 @@
+import { model } from "./model.js";
+import { getClassName, getClassType, addStudySession, changeBool } from "./controller.js";
+
 export function updateView(){
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${!model.input.addView ? createTable() : ""}
     ${model.input.addView ? createAdd() : ""}
-    <button onclick="changeBool('addView')">${!model.input.addView ? "Add" : "Cancel"}</button>
+    <button onclick="AddButton()">${!model.input.addView ? "Add" : "Cancel"}</button>
 `;
 }
 
@@ -30,19 +33,19 @@ function createAdd() {
     <form>
     <div>
     <label> Class Name: </label>
-    <select id="className" onchange="model.input.addInputs.classNameId = this.value">
+    <select id="className">
         ${getOptionsClassNames()}
     </select
     </div>
     <div>
     <label> Study Type: </label>
-    <select id="studyType" onchange="model.input.addInputs.typeId = this.value">
+    <select id="studyType">
         ${getOptionsStudyTypes()}
     </select
     </div>
     <div>
     <label>is Done: </label>
-    <select id="finsihed" onchange="model.input.addInputs.finished = this.value">
+    <select id="finsihed">
         <otion selected disabled>Select Status</option>
         <option value="true">True</option>
         <option value="false">False</option>
@@ -50,18 +53,18 @@ function createAdd() {
     </div>
     <div>
     <label>Date</label>
-    <input type="date" onchange="model.input.addInputs.date = this.value">
+    <input id="date" type="date">
     </div>
     <div>
     <label>Start Time</label>
-    <input type="time" onchange="model.input.addInputs.startTime = this.value">
+    <input id="startTime" type="time">
     </div>
     <div>
     <label>End Time</label>
-    <input type="time" onchange="model.input.addInputs.endTime = this.value">
+    <input id="endTime" type="time">
     </div>
     <br>
-    <button type="button" onclick="addStudySession()">Add Study Session</button>
+    <button type="button" onclick="SubmitButton()">Add Study Session</button>
     </form>
     `;
     return html

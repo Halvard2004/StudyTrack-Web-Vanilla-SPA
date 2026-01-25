@@ -1,22 +1,23 @@
-import { updateView } from "./view.js";
+import {updateView} from './view.js';
+import {changeBool, addStudySession, fetchInputValues}  from './controller.js';
 
-var view = await loadMopdule("./view.js");
-var controller = await loadMopdule("./controller.js"); 
-var model = await loadMopdule("./model.js");
-var common = await loadMopdule("./common.js"); 
 
 async function initialize(){
-    await getmopdules();
-    view.updateView();
+    updateView();
 }
 
-async function loadMopdule(moduleName){
-    try {
-       var module = await import(moduleName); 
-       return module;
-    } catch (error) {
-        console.error(`Error loading module ${moduleName}:`, error);
-    }   
-    
-
+function AddButton(){
+    changeBool("addView");
+    setTimeout(1000);
+    updateView();
 }
+
+async function SubmitButton(){
+    fetchInputValues();
+    addStudySession();
+    updateView();
+}
+
+window.initialize = initialize;
+window.AddButton = AddButton;
+window.SubmitButton = SubmitButton;
