@@ -60,3 +60,11 @@ export function addStudySession(){
         endTime: ""};
     model.input.addView = false;
 }
+
+
+export function updateModel(List, Classes, StudyTypes){
+    model.studysessions = List;
+    model.classes = Classes;
+    model.studyType = StudyTypes;
+    console.log(model);
+}
