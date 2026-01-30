@@ -2,17 +2,14 @@ import {updateView} from './view.js';
 import {changeBool, addStudySession, fetchInputValues, updateModel}  from './controller.js';
 import { getList, getClasses, getStudyTypes } from './api.js';
 
-function initialize(){
-    var List = getList()
-    var Classes =  getClasses()
-    var StudyTypes = getStudyTypes()
+async function initialize(){
+    var List = await getList()
+    var Classes =  await getClasses()
+    var StudyTypes = await getStudyTypes()
     
-    setTimeout(() => {
     updateModel(List, Classes, StudyTypes);
     updateView();
-}, 2000);
 
-    
     
 }
 
